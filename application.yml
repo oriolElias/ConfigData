@@ -1,0 +1,31 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+# Depending on which profile is active, the application gives 
+# itself a different name when registering with Eureka
+---
+spring:
+  profiles: subject
+words: I,You,He,She,It
+
+---
+spring:
+  profiles: verb
+words: ran,knew,had,saw,bought
+
+---
+spring:
+  profiles: article
+words: a,the
+
+---
+spring:
+  profiles: adjective
+words: reasonable,leaky,suspicious,ordinary,unlikely
+
+---
+spring:
+  profiles: noun
+words: boat,book,vote,seat,backpack,partition,groundhog 
